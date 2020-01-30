@@ -1,0 +1,63 @@
+﻿@model Metric
+
+@{
+    ViewData["Title"] = "Metrics calc";
+}
+<h1>@ViewData["Title"]</h1>
+
+<form asp-controller="Metrics" asp-action="Distance" method="post">
+    <div class="form-group">
+        <div class="row">
+            <div class="col-sm">
+                <label asp-for="Distance.Km"></label>
+                <input type="number" asp-for="Distance.Km" value="Distance.Km" />
+            </div>
+            <div class="col-sm">
+                <label asp-for="Distance.Miles"></label>
+                <input type="number" asp-for="Distance.Miles" value="Distance.Miles"/>
+            </div>
+
+            <div class="col-sm">
+                <input type="submit" id="distanceSubmit" value="Submit" asp-action="Distance" />
+            </div>
+
+        </div>
+        </div>
+</form>
+
+<form asp-controller="Metrics" asp-action="Length" method="post">
+    <div class="form-group">
+        <div class="row">
+            <div class="col-sm">
+                <label asp-for="Cm"></label>
+                <input type="number" asp-for="Cm" value="Cm"/>
+            </div>
+            <div class="col-sm">
+                <label asp-for="Inches"></label>
+                <input type="number" asp-for="Inches" value="Inches" />
+            </div>
+            <div class="col-sm">
+                <input type="submit" value="Submit" asp-action="Length" />
+            </div>
+        </div>
+    </div>
+</form>
+
+<form asp-controller="Metrics" asp-action="Temperature" method="post">
+    <div class="form-group">
+        <div class="row">
+            <div class="col-sm">
+                <label asp-for="Temperature.Celcius"></label>
+                <input type="number" asp-for="Temperature.Celcius" value="Temperature.Celcius" />
+            </div>
+            <div class="col-sm">
+                <label asp-for="Temperature.Fahrenheit"></label>
+                <input type="number" asp-for="Temperature.Fahrenheit" value="Temperature.Fahrenheit" />
+            </div>
+            <div class="col-sm">
+                <input type="submit" value="Submit" asp-action="Temperature" />
+            </div>
+        </div>
+    </div>
+</form>
+
